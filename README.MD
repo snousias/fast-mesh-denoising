@@ -43,6 +43,10 @@ The generated model can be found in
 
 ## Notes
 
+### Repository with full code and data  
+
+	https://gitlab.com/vvr/snousias/fast-mesh-denoising
+
 ### Structure
     ./data/
     ./images/
