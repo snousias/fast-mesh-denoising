@@ -1,0 +1,34 @@
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+Dat=[[7.19553017616272, 3.9495084285736084, 3.8936190605163574, 3.7926688194274902, 4.072003364562988, 3.7544503211975098, 3.768246650695801, 3.7534778118133545, 3.8266615867614746, 3.771867036819458],
+[4.880508899688721, 2.5726959705352783, 3.184799909591675, 2.4157297611236572, 2.1843161582946777, 2.188011407852173, 2.2942960262298584, 2.213667631149292, 2.2000699043273926, 2.1775081157684326],
+[4.788172245025635, 1.7677671909332275, 1.7049124240875244, 1.654463768005371, 1.6348824501037598, 1.6705472469329834, 1.9592533111572266, 2.081798791885376, 1.6715571880340576, 1.65816330909729],
+[5.0453410148620605, 1.5628998279571533, 1.4489569664001465, 1.4137828350067139, 1.7502896785736084, 1.752265453338623, 1.4654185771942139, 1.5477168560028076, 1.4022257328033447, 1.407116413116455],
+[5.287771463394165, 1.4964451789855957, 1.414945125579834, 1.4046900272369385, 1.664771318435669, 1.4268991947174072, 1.4423234462738037, 1.4119653701782227, 1.3808207511901855, 1.3945443630218506],
+[0.4513382911682129, 0.16810297966003418, 0.17412447929382324, 0.16711807250976562, 0.16711831092834473, 0.1681196689605713, 0.17013764381408691, 0.1701209545135498, 0.16912007331848145, 0.1681365966796875]]
+
+
+Rotation= [8.11, 6.57, 5.83, 5.48, 5.83, 3.92]
+
+fig7, ax7 = plt.subplots(figsize=(6.4, 3))
+
+ax7.set_title('Distribution of execution times for different settings')
+bp1=ax7.boxplot(Dat,notch=False, widths=0.35,
+                 patch_artist=True, boxprops=dict(facecolor='lightgreen'))
+
+randomDists = ['1 Core', ' 2 Cores', '4 Cores', '6 Cores',
+               '8 Cores','GPU']
+xtickNames = plt.setp(ax7, xticklabels=randomDists)
+plt.setp(xtickNames, rotation=0, fontsize=12,fontname="Times New Roman")
+ax7.set_xlabel('Execution setting',fontname="Times New Roman", fontsize=14)
+ax7.set_ylabel('Execution times (Seconds) ',fontname="Times New Roman", fontsize=14)
+#l1,=ax7.plot(range(1,(len(Rotation)+1)),Rotation, 'v-',linewidth=2,markersize=10)
+#ax7.legend((Rotation, Dat), ('label1', 'label2'),loc="upper left")
+ax7.legend([bp1["boxes"][0]],  ['Normal filtering , Conditional Variational Autoencoder'], loc='upper right')
+#ax7.legend([bp1["boxes"][0],l1],  ['Normal filtering (CVAE)','Normal rotation (Numpy)'], loc='upper right')
+plt.ylim(top=4.5)
+
+plt.show()

@@ -1,0 +1,7 @@
+__pycache__/
+.idea/
+_other/
+_old/
+meshes/
+results/
+sessions/
