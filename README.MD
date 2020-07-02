@@ -1,4 +1,4 @@
-# Mesh Saliency Extraction
+# Fast mesh denoising with data driven normal filtering using deep variational autoencoders
 
 This is an implementation for the paper entitled "Fast mesh denoising with data driven normal filtering using deep variational autoencoders" published in IEEE Transactions on Industrial Informatics 10.1109/TII.2020.3000491
 
