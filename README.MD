@@ -2,6 +2,8 @@
 
 This is an implementation for the paper entitled "Fast mesh denoising with data driven normal filtering using deep variational autoencoders" published in IEEE Transactions on Industrial Informatics 10.1109/TII.2020.3000491
 
+https://ieeexplore.ieee.org/document/9110709
+
 ## Description 
 Recent advances in 3D scanning technology have enabled the deployment of 3D models in various industrial applications like digital twins, remote inspection and reverse engineering. Despite their evolving performance, 3D scanners, still introduce noise and artifacts in the acquired dense models. In this work, we propose a fast and robust denoising method for dense 3D scanned industrial models. The proposed approach employs conditional variational autoencoders to effectively filter face normals. Training and inference are performed in a sliding patch setup reducing the size of the required training data and execution times. We conducted extensive evaluation studies using 3D scanned and CAD models. The results verify plausible denoising outcomes, demonstrating similar or higher reconstruction accuracy, compared to other state-of-the-art approaches. Specifically, for 3D models with more than 1e4 faces, the presented pipeline is twice as fast as methods with equivalent reconstruction error.
 
